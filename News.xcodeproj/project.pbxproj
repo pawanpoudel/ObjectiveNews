@@ -1,0 +1,1028 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		153E3DE41B4A3AFD00435C9F /* GNFetchArticlesUseCaseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DC91B4A3AFD00435C9F /* GNFetchArticlesUseCaseSpec.m */; };
+		153E3DE61B4A3AFD00435C9F /* GNMockArticleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DCE1B4A3AFD00435C9F /* GNMockArticleService.m */; };
+		153E3DE71B4A3AFD00435C9F /* GNMockFetchArticlesUseCaseOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DD01B4A3AFD00435C9F /* GNMockFetchArticlesUseCaseOutput.m */; };
+		153E3DE81B4A3AFD00435C9F /* GNObjectConfiguratorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DD21B4A3AFD00435C9F /* GNObjectConfiguratorSpec.m */; };
+		153E3DE91B4A3AFD00435C9F /* GNAppleNewsArticleBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DD61B4A3AFD00435C9F /* GNAppleNewsArticleBuilderSpec.m */; };
+		153E3DEA1B4A3AFD00435C9F /* GNGoogleNewsArticleBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DD71B4A3AFD00435C9F /* GNGoogleNewsArticleBuilderSpec.m */; };
+		153E3DEB1B4A3AFD00435C9F /* GNAppleNewsUrlRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DD91B4A3AFD00435C9F /* GNAppleNewsUrlRequestSpec.m */; };
+		153E3DEC1B4A3AFD00435C9F /* GNGoogleNewsUrlRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DDA1B4A3AFD00435C9F /* GNGoogleNewsUrlRequestSpec.m */; };
+		153E3DED1B4A3AFD00435C9F /* GNArticleApiClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DDB1B4A3AFD00435C9F /* GNArticleApiClientSpec.m */; };
+		153E3DEE1B4A3AFD00435C9F /* GNTestRssData.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DDE1B4A3AFD00435C9F /* GNTestRssData.m */; };
+		153E3DEF1B4A3AFD00435C9F /* validAppleNewsRssFeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = 153E3DDF1B4A3AFD00435C9F /* validAppleNewsRssFeed.xml */; };
+		153E3DF01B4A3AFD00435C9F /* validGoogleNewsRssFeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = 153E3DE01B4A3AFD00435C9F /* validGoogleNewsRssFeed.xml */; };
+		153E3DF11B4A3AFD00435C9F /* GNMockNetworkCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DE31B4A3AFD00435C9F /* GNMockNetworkCommunicator.m */; };
+		153E3DF61B4A3DC800435C9F /* GNArticleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E3DF51B4A3DC800435C9F /* GNArticleSpec.m */; };
+		15717D221B49BB6800CB959F /* GNArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CD01B49BB6700CB959F /* GNArticle.m */; };
+		15717D231B49BB6800CB959F /* GNFetchArticlesUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CD31B49BB6700CB959F /* GNFetchArticlesUseCase.m */; };
+		15717D241B49BB6800CB959F /* GNObjectConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CD61B49BB6800CB959F /* GNObjectConfigurator.m */; };
+		15717D251B49BB6800CB959F /* GNArticleCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CDA1B49BB6800CB959F /* GNArticleCoreDataManager.m */; };
+		15717D261B49BB6800CB959F /* GNCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CDC1B49BB6800CB959F /* GNCoreDataStack.m */; };
+		15717D271B49BB6800CB959F /* GNManagedArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CDE1B49BB6800CB959F /* GNManagedArticle.m */; };
+		15717D281B49BB6800CB959F /* GoogleNews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15717CDF1B49BB6800CB959F /* GoogleNews.xcdatamodeld */; };
+		15717D291B49BB6800CB959F /* NSManagedObject+GNAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CE21B49BB6800CB959F /* NSManagedObject+GNAdditions.m */; };
+		15717D2A1B49BB6800CB959F /* NSManagedObjectContext+GNAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CE41B49BB6800CB959F /* NSManagedObjectContext+GNAdditions.m */; };
+		15717D2B1B49BB6800CB959F /* GNAbstractArticleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CE81B49BB6800CB959F /* GNAbstractArticleBuilder.m */; };
+		15717D2C1B49BB6800CB959F /* GNAppleNewsArticleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CEB1B49BB6800CB959F /* GNAppleNewsArticleBuilder.m */; };
+		15717D2D1B49BB6800CB959F /* GNGoogleNewsArticleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CED1B49BB6800CB959F /* GNGoogleNewsArticleBuilder.m */; };
+		15717D2E1B49BB6800CB959F /* GNAppleNewsUrlRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CF01B49BB6800CB959F /* GNAppleNewsUrlRequest.m */; };
+		15717D2F1B49BB6800CB959F /* GNGoogleNewsUrlRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CF31B49BB6800CB959F /* GNGoogleNewsUrlRequest.m */; };
+		15717D301B49BB6800CB959F /* GNArticleApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CF51B49BB6800CB959F /* GNArticleApiClient.m */; };
+		15717D311B49BB6800CB959F /* GNNetworkCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CF71B49BB6800CB959F /* GNNetworkCommunicator.m */; };
+		15717D321B49BB6800CB959F /* GDataXMLElement+GNAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CFA1B49BB6800CB959F /* GDataXMLElement+GNAdditions.m */; };
+		15717D331B49BB6800CB959F /* GNRssEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CFC1B49BB6800CB959F /* GNRssEntry.m */; };
+		15717D341B49BB6800CB959F /* GNRssEntryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717CFE1B49BB6800CB959F /* GNRssEntryBuilder.m */; };
+		15717D351B49BB6800CB959F /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D001B49BB6800CB959F /* NSDate+InternetDateTime.m */; };
+		15717D361B49BB6800CB959F /* GNArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D041B49BB6800CB959F /* GNArticleCell.m */; };
+		15717D371B49BB6800CB959F /* GNArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15717D051B49BB6800CB959F /* GNArticleCell.xib */; };
+		15717D381B49BB6800CB959F /* GNArticleListTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D071B49BB6800CB959F /* GNArticleListTableDataSource.m */; };
+		15717D391B49BB6800CB959F /* GNArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D091B49BB6800CB959F /* GNArticleListViewController.m */; };
+		15717D3A1B49BB6800CB959F /* GNArticleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15717D0A1B49BB6800CB959F /* GNArticleListViewController.xib */; };
+		15717D3B1B49BB6800CB959F /* GNPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D0C1B49BB6800CB959F /* GNPullToRefreshView.m */; };
+		15717D3C1B49BB6800CB959F /* NSFetchedResultsController+GNAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D0E1B49BB6800CB959F /* NSFetchedResultsController+GNAdditions.m */; };
+		15717D3D1B49BB6800CB959F /* GNArticleLoadingErrorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D111B49BB6800CB959F /* GNArticleLoadingErrorCell.m */; };
+		15717D3E1B49BB6800CB959F /* GNArticleLoadingErrorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15717D121B49BB6800CB959F /* GNArticleLoadingErrorCell.xib */; };
+		15717D3F1B49BB6800CB959F /* UIScreen+GNAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D141B49BB6800CB959F /* UIScreen+GNAdditions.m */; };
+		15717D401B49BB6800CB959F /* GNStaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D161B49BB6800CB959F /* GNStaticCell.m */; };
+		15717D411B49BB6800CB959F /* UIView+LoadNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D181B49BB6800CB959F /* UIView+LoadNib.m */; };
+		15717D421B49BB6800CB959F /* GNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D1A1B49BB6800CB959F /* GNAppDelegate.m */; };
+		15717D441B49BB6800CB959F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15717D1E1B49BB6800CB959F /* Images.xcassets */; };
+		15717D461B49BB6800CB959F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15717D211B49BB6800CB959F /* main.m */; };
+		15717D481B49BB9800CB959F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15717D471B49BB9800CB959F /* Default-568h@2x.png */; };
+		15717D491B49BE1C00CB959F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15717D1C1B49BB6800CB959F /* LaunchScreen.xib */; };
+		157D694F1B4A6E0D0057CF3F /* GNDatabaseIntegrationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 157D694C1B4A6E0D0057CF3F /* GNDatabaseIntegrationSpec.m */; };
+		157D69501B4A6E0D0057CF3F /* GNArticleApiClientIntegrationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 157D694E1B4A6E0D0057CF3F /* GNArticleApiClientIntegrationSpec.m */; };
+		369A6B1A75BE4F108D1F6497 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD3A73E4F044FF7AF266EDF /* libPods.a */; };
+		57ACCD75275E34600B46AC28 /* libPods-NewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E1989B41B9A626E9971F39 /* libPods-NewsTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1539607619CE556B000BF2AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1539605119CE556B000BF2AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1539605819CE556B000BF2AE;
+			remoteInfo = FeedLoader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04E1989B41B9A626E9971F39 /* libPods-NewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1539605919CE556B000BF2AE /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1539607519CE556B000BF2AE /* NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		153E3DC91B4A3AFD00435C9F /* GNFetchArticlesUseCaseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNFetchArticlesUseCaseSpec.m; sourceTree = "<group>"; };
+		153E3DCD1B4A3AFD00435C9F /* GNMockArticleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNMockArticleService.h; sourceTree = "<group>"; };
+		153E3DCE1B4A3AFD00435C9F /* GNMockArticleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNMockArticleService.m; sourceTree = "<group>"; };
+		153E3DCF1B4A3AFD00435C9F /* GNMockFetchArticlesUseCaseOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNMockFetchArticlesUseCaseOutput.h; sourceTree = "<group>"; };
+		153E3DD01B4A3AFD00435C9F /* GNMockFetchArticlesUseCaseOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNMockFetchArticlesUseCaseOutput.m; sourceTree = "<group>"; };
+		153E3DD21B4A3AFD00435C9F /* GNObjectConfiguratorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNObjectConfiguratorSpec.m; sourceTree = "<group>"; };
+		153E3DD61B4A3AFD00435C9F /* GNAppleNewsArticleBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNAppleNewsArticleBuilderSpec.m; sourceTree = "<group>"; };
+		153E3DD71B4A3AFD00435C9F /* GNGoogleNewsArticleBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNGoogleNewsArticleBuilderSpec.m; sourceTree = "<group>"; };
+		153E3DD91B4A3AFD00435C9F /* GNAppleNewsUrlRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNAppleNewsUrlRequestSpec.m; sourceTree = "<group>"; };
+		153E3DDA1B4A3AFD00435C9F /* GNGoogleNewsUrlRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNGoogleNewsUrlRequestSpec.m; sourceTree = "<group>"; };
+		153E3DDB1B4A3AFD00435C9F /* GNArticleApiClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticleApiClientSpec.m; sourceTree = "<group>"; };
+		153E3DDD1B4A3AFD00435C9F /* GNTestRssData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNTestRssData.h; sourceTree = "<group>"; };
+		153E3DDE1B4A3AFD00435C9F /* GNTestRssData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNTestRssData.m; sourceTree = "<group>"; };
+		153E3DDF1B4A3AFD00435C9F /* validAppleNewsRssFeed.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = validAppleNewsRssFeed.xml; sourceTree = "<group>"; };
+		153E3DE01B4A3AFD00435C9F /* validGoogleNewsRssFeed.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = validGoogleNewsRssFeed.xml; sourceTree = "<group>"; };
+		153E3DE21B4A3AFD00435C9F /* GNMockNetworkCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNMockNetworkCommunicator.h; sourceTree = "<group>"; };
+		153E3DE31B4A3AFD00435C9F /* GNMockNetworkCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNMockNetworkCommunicator.m; sourceTree = "<group>"; };
+		153E3DF51B4A3DC800435C9F /* GNArticleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticleSpec.m; sourceTree = "<group>"; };
+		15717C561B49BACD00CB959F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15717CCB1B49BB6700CB959F /* GNArticleRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticleRepository.h; sourceTree = "<group>"; };
+		15717CCC1B49BB6700CB959F /* GNArticleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticleService.h; sourceTree = "<group>"; };
+		15717CCD1B49BB6700CB959F /* GNFetchArticlesUseCaseBoundaries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNFetchArticlesUseCaseBoundaries.h; sourceTree = "<group>"; };
+		15717CCF1B49BB6700CB959F /* GNArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticle.h; sourceTree = "<group>"; };
+		15717CD01B49BB6700CB959F /* GNArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticle.m; sourceTree = "<group>"; };
+		15717CD21B49BB6700CB959F /* GNFetchArticlesUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNFetchArticlesUseCase.h; sourceTree = "<group>"; };
+		15717CD31B49BB6700CB959F /* GNFetchArticlesUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNFetchArticlesUseCase.m; sourceTree = "<group>"; };
+		15717CD51B49BB6700CB959F /* GNObjectConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNObjectConfigurator.h; sourceTree = "<group>"; };
+		15717CD61B49BB6800CB959F /* GNObjectConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNObjectConfigurator.m; sourceTree = "<group>"; };
+		15717CD91B49BB6800CB959F /* GNArticleCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticleCoreDataManager.h; sourceTree = "<group>"; };
+		15717CDA1B49BB6800CB959F /* GNArticleCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticleCoreDataManager.m; sourceTree = "<group>"; };
+		15717CDB1B49BB6800CB959F /* GNCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNCoreDataStack.h; sourceTree = "<group>"; };
+		15717CDC1B49BB6800CB959F /* GNCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNCoreDataStack.m; sourceTree = "<group>"; };
+		15717CDD1B49BB6800CB959F /* GNManagedArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNManagedArticle.h; sourceTree = "<group>"; };
+		15717CDE1B49BB6800CB959F /* GNManagedArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNManagedArticle.m; sourceTree = "<group>"; };
+		15717CE01B49BB6800CB959F /* GoogleNews.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoogleNews.xcdatamodel; sourceTree = "<group>"; };
+		15717CE11B49BB6800CB959F /* NSManagedObject+GNAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+GNAdditions.h"; sourceTree = "<group>"; };
+		15717CE21B49BB6800CB959F /* NSManagedObject+GNAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+GNAdditions.m"; sourceTree = "<group>"; };
+		15717CE31B49BB6800CB959F /* NSManagedObjectContext+GNAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+GNAdditions.h"; sourceTree = "<group>"; };
+		15717CE41B49BB6800CB959F /* NSManagedObjectContext+GNAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+GNAdditions.m"; sourceTree = "<group>"; };
+		15717CE71B49BB6800CB959F /* GNAbstractArticleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNAbstractArticleBuilder.h; sourceTree = "<group>"; };
+		15717CE81B49BB6800CB959F /* GNAbstractArticleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNAbstractArticleBuilder.m; sourceTree = "<group>"; };
+		15717CE91B49BB6800CB959F /* GNAbstractArticleBuilder_protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNAbstractArticleBuilder_protected.h; sourceTree = "<group>"; };
+		15717CEA1B49BB6800CB959F /* GNAppleNewsArticleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNAppleNewsArticleBuilder.h; sourceTree = "<group>"; };
+		15717CEB1B49BB6800CB959F /* GNAppleNewsArticleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNAppleNewsArticleBuilder.m; sourceTree = "<group>"; };
+		15717CEC1B49BB6800CB959F /* GNGoogleNewsArticleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGoogleNewsArticleBuilder.h; sourceTree = "<group>"; };
+		15717CED1B49BB6800CB959F /* GNGoogleNewsArticleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNGoogleNewsArticleBuilder.m; sourceTree = "<group>"; };
+		15717CEF1B49BB6800CB959F /* GNAppleNewsUrlRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNAppleNewsUrlRequest.h; sourceTree = "<group>"; };
+		15717CF01B49BB6800CB959F /* GNAppleNewsUrlRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNAppleNewsUrlRequest.m; sourceTree = "<group>"; };
+		15717CF11B49BB6800CB959F /* GNArticleUrlRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticleUrlRequest.h; sourceTree = "<group>"; };
+		15717CF21B49BB6800CB959F /* GNGoogleNewsUrlRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGoogleNewsUrlRequest.h; sourceTree = "<group>"; };
+		15717CF31B49BB6800CB959F /* GNGoogleNewsUrlRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNGoogleNewsUrlRequest.m; sourceTree = "<group>"; };
+		15717CF41B49BB6800CB959F /* GNArticleApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticleApiClient.h; sourceTree = "<group>"; };
+		15717CF51B49BB6800CB959F /* GNArticleApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticleApiClient.m; sourceTree = "<group>"; };
+		15717CF61B49BB6800CB959F /* GNNetworkCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNNetworkCommunicator.h; sourceTree = "<group>"; };
+		15717CF71B49BB6800CB959F /* GNNetworkCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNNetworkCommunicator.m; sourceTree = "<group>"; };
+		15717CF91B49BB6800CB959F /* GDataXMLElement+GNAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLElement+GNAdditions.h"; sourceTree = "<group>"; };
+		15717CFA1B49BB6800CB959F /* GDataXMLElement+GNAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLElement+GNAdditions.m"; sourceTree = "<group>"; };
+		15717CFB1B49BB6800CB959F /* GNRssEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNRssEntry.h; sourceTree = "<group>"; };
+		15717CFC1B49BB6800CB959F /* GNRssEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNRssEntry.m; sourceTree = "<group>"; };
+		15717CFD1B49BB6800CB959F /* GNRssEntryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNRssEntryBuilder.h; sourceTree = "<group>"; };
+		15717CFE1B49BB6800CB959F /* GNRssEntryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNRssEntryBuilder.m; sourceTree = "<group>"; };
+		15717CFF1B49BB6800CB959F /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		15717D001B49BB6800CB959F /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		15717D031B49BB6800CB959F /* GNArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticleCell.h; sourceTree = "<group>"; };
+		15717D041B49BB6800CB959F /* GNArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticleCell.m; sourceTree = "<group>"; };
+		15717D051B49BB6800CB959F /* GNArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNArticleCell.xib; sourceTree = "<group>"; };
+		15717D061B49BB6800CB959F /* GNArticleListTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticleListTableDataSource.h; sourceTree = "<group>"; };
+		15717D071B49BB6800CB959F /* GNArticleListTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticleListTableDataSource.m; sourceTree = "<group>"; };
+		15717D081B49BB6800CB959F /* GNArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticleListViewController.h; sourceTree = "<group>"; };
+		15717D091B49BB6800CB959F /* GNArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticleListViewController.m; sourceTree = "<group>"; };
+		15717D0A1B49BB6800CB959F /* GNArticleListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNArticleListViewController.xib; sourceTree = "<group>"; };
+		15717D0B1B49BB6800CB959F /* GNPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNPullToRefreshView.h; sourceTree = "<group>"; };
+		15717D0C1B49BB6800CB959F /* GNPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNPullToRefreshView.m; sourceTree = "<group>"; };
+		15717D0D1B49BB6800CB959F /* NSFetchedResultsController+GNAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+GNAdditions.h"; sourceTree = "<group>"; };
+		15717D0E1B49BB6800CB959F /* NSFetchedResultsController+GNAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+GNAdditions.m"; sourceTree = "<group>"; };
+		15717D101B49BB6800CB959F /* GNArticleLoadingErrorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNArticleLoadingErrorCell.h; sourceTree = "<group>"; };
+		15717D111B49BB6800CB959F /* GNArticleLoadingErrorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticleLoadingErrorCell.m; sourceTree = "<group>"; };
+		15717D121B49BB6800CB959F /* GNArticleLoadingErrorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNArticleLoadingErrorCell.xib; sourceTree = "<group>"; };
+		15717D131B49BB6800CB959F /* UIScreen+GNAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+GNAdditions.h"; sourceTree = "<group>"; };
+		15717D141B49BB6800CB959F /* UIScreen+GNAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+GNAdditions.m"; sourceTree = "<group>"; };
+		15717D151B49BB6800CB959F /* GNStaticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNStaticCell.h; sourceTree = "<group>"; };
+		15717D161B49BB6800CB959F /* GNStaticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNStaticCell.m; sourceTree = "<group>"; };
+		15717D171B49BB6800CB959F /* UIView+LoadNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadNib.h"; sourceTree = "<group>"; };
+		15717D181B49BB6800CB959F /* UIView+LoadNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadNib.m"; sourceTree = "<group>"; };
+		15717D191B49BB6800CB959F /* GNAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNAppDelegate.h; sourceTree = "<group>"; };
+		15717D1A1B49BB6800CB959F /* GNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNAppDelegate.m; sourceTree = "<group>"; };
+		15717D1D1B49BB6800CB959F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		15717D1E1B49BB6800CB959F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		15717D201B49BB6800CB959F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15717D211B49BB6800CB959F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15717D471B49BB9800CB959F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		157D694C1B4A6E0D0057CF3F /* GNDatabaseIntegrationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNDatabaseIntegrationSpec.m; sourceTree = "<group>"; };
+		157D694E1B4A6E0D0057CF3F /* GNArticleApiClientIntegrationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNArticleApiClientIntegrationSpec.m; sourceTree = "<group>"; };
+		2631E91D0850F69293CF29A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		729CF8BADB8F8B07170D0AAC /* Pods-NewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsTests/Pods-NewsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0E719DA343370FD21F9312A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CA75F5A4828DBC5586CC8F5A /* Pods-NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsTests/Pods-NewsTests.release.xcconfig"; sourceTree = "<group>"; };
+		EFD3A73E4F044FF7AF266EDF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1539605619CE556B000BF2AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369A6B1A75BE4F108D1F6497 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1539607219CE556B000BF2AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57ACCD75275E34600B46AC28 /* libPods-NewsTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1539605019CE556B000BF2AE = {
+			isa = PBXGroup;
+			children = (
+				15717CC81B49BB6700CB959F /* News */,
+				15717C551B49BACD00CB959F /* NewsTests */,
+				1539605A19CE556B000BF2AE /* Products */,
+				922770E13C1E44C3B31DF01A /* Frameworks */,
+				D79CA90C6F3B54D6F74D40DE /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		1539605A19CE556B000BF2AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1539605919CE556B000BF2AE /* News.app */,
+				1539607519CE556B000BF2AE /* NewsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		153E3DC31B4A3AFD00435C9F /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				157D694B1B4A6E0D0057CF3F /* Database */,
+				157D694D1B4A6E0D0057CF3F /* Server */,
+			);
+			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
+		153E3DC61B4A3AFD00435C9F /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DC71B4A3AFD00435C9F /* ApplicationLogic */,
+				153E3DD11B4A3AFD00435C9F /* DependencyInjection */,
+				153E3DD31B4A3AFD00435C9F /* EnternalDependencies */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		153E3DC71B4A3AFD00435C9F /* ApplicationLogic */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DF41B4A3D9100435C9F /* Entities */,
+				153E3DC81B4A3AFD00435C9F /* UseCases */,
+			);
+			path = ApplicationLogic;
+			sourceTree = "<group>";
+		};
+		153E3DC81B4A3AFD00435C9F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DC91B4A3AFD00435C9F /* GNFetchArticlesUseCaseSpec.m */,
+				153E3DCA1B4A3AFD00435C9F /* TestDoubles */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		153E3DCA1B4A3AFD00435C9F /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DCD1B4A3AFD00435C9F /* GNMockArticleService.h */,
+				153E3DCE1B4A3AFD00435C9F /* GNMockArticleService.m */,
+				153E3DCF1B4A3AFD00435C9F /* GNMockFetchArticlesUseCaseOutput.h */,
+				153E3DD01B4A3AFD00435C9F /* GNMockFetchArticlesUseCaseOutput.m */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		153E3DD11B4A3AFD00435C9F /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DD21B4A3AFD00435C9F /* GNObjectConfiguratorSpec.m */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		153E3DD31B4A3AFD00435C9F /* EnternalDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DD41B4A3AFD00435C9F /* Server */,
+			);
+			path = EnternalDependencies;
+			sourceTree = "<group>";
+		};
+		153E3DD41B4A3AFD00435C9F /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DDB1B4A3AFD00435C9F /* GNArticleApiClientSpec.m */,
+				153E3DD51B4A3AFD00435C9F /* ArticleBuilders */,
+				153E3DD81B4A3AFD00435C9F /* ArticleUrlRequests */,
+				153E3DDC1B4A3AFD00435C9F /* TestData */,
+				153E3DE11B4A3AFD00435C9F /* TestDoubles */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		153E3DD51B4A3AFD00435C9F /* ArticleBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DD61B4A3AFD00435C9F /* GNAppleNewsArticleBuilderSpec.m */,
+				153E3DD71B4A3AFD00435C9F /* GNGoogleNewsArticleBuilderSpec.m */,
+			);
+			path = ArticleBuilders;
+			sourceTree = "<group>";
+		};
+		153E3DD81B4A3AFD00435C9F /* ArticleUrlRequests */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DD91B4A3AFD00435C9F /* GNAppleNewsUrlRequestSpec.m */,
+				153E3DDA1B4A3AFD00435C9F /* GNGoogleNewsUrlRequestSpec.m */,
+			);
+			path = ArticleUrlRequests;
+			sourceTree = "<group>";
+		};
+		153E3DDC1B4A3AFD00435C9F /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DDD1B4A3AFD00435C9F /* GNTestRssData.h */,
+				153E3DDE1B4A3AFD00435C9F /* GNTestRssData.m */,
+				153E3DDF1B4A3AFD00435C9F /* validAppleNewsRssFeed.xml */,
+				153E3DE01B4A3AFD00435C9F /* validGoogleNewsRssFeed.xml */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		153E3DE11B4A3AFD00435C9F /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DE21B4A3AFD00435C9F /* GNMockNetworkCommunicator.h */,
+				153E3DE31B4A3AFD00435C9F /* GNMockNetworkCommunicator.m */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		153E3DF41B4A3D9100435C9F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				153E3DF51B4A3DC800435C9F /* GNArticleSpec.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		15717C551B49BACD00CB959F /* NewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				15717C561B49BACD00CB959F /* Info.plist */,
+				153E3DC61B4A3AFD00435C9F /* UnitTests */,
+				153E3DC31B4A3AFD00435C9F /* IntegrationTests */,
+			);
+			path = NewsTests;
+			sourceTree = "<group>";
+		};
+		15717CC81B49BB6700CB959F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				15717D191B49BB6800CB959F /* GNAppDelegate.h */,
+				15717D1A1B49BB6800CB959F /* GNAppDelegate.m */,
+				15717CC91B49BB6700CB959F /* ApplicationLogic */,
+				15717CD41B49BB6700CB959F /* DependencyInjection */,
+				15717CD71B49BB6800CB959F /* ExternalDependencies */,
+				15717D1B1B49BB6800CB959F /* Resources */,
+				15717D1F1B49BB6800CB959F /* SupportingFiles */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		15717CC91B49BB6700CB959F /* ApplicationLogic */ = {
+			isa = PBXGroup;
+			children = (
+				15717CCA1B49BB6700CB959F /* Boundaries */,
+				15717CCE1B49BB6700CB959F /* Entities */,
+				15717CD11B49BB6700CB959F /* UseCases */,
+			);
+			path = ApplicationLogic;
+			sourceTree = "<group>";
+		};
+		15717CCA1B49BB6700CB959F /* Boundaries */ = {
+			isa = PBXGroup;
+			children = (
+				15717CCB1B49BB6700CB959F /* GNArticleRepository.h */,
+				15717CCC1B49BB6700CB959F /* GNArticleService.h */,
+				15717CCD1B49BB6700CB959F /* GNFetchArticlesUseCaseBoundaries.h */,
+			);
+			path = Boundaries;
+			sourceTree = "<group>";
+		};
+		15717CCE1B49BB6700CB959F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				15717CCF1B49BB6700CB959F /* GNArticle.h */,
+				15717CD01B49BB6700CB959F /* GNArticle.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		15717CD11B49BB6700CB959F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				15717CD21B49BB6700CB959F /* GNFetchArticlesUseCase.h */,
+				15717CD31B49BB6700CB959F /* GNFetchArticlesUseCase.m */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		15717CD41B49BB6700CB959F /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				15717CD51B49BB6700CB959F /* GNObjectConfigurator.h */,
+				15717CD61B49BB6800CB959F /* GNObjectConfigurator.m */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		15717CD71B49BB6800CB959F /* ExternalDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				15717CD81B49BB6800CB959F /* Database */,
+				15717CE51B49BB6800CB959F /* Server */,
+				15717D011B49BB6800CB959F /* UserInterface */,
+			);
+			path = ExternalDependencies;
+			sourceTree = "<group>";
+		};
+		15717CD81B49BB6800CB959F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				15717CD91B49BB6800CB959F /* GNArticleCoreDataManager.h */,
+				15717CDA1B49BB6800CB959F /* GNArticleCoreDataManager.m */,
+				15717CDB1B49BB6800CB959F /* GNCoreDataStack.h */,
+				15717CDC1B49BB6800CB959F /* GNCoreDataStack.m */,
+				15717CDD1B49BB6800CB959F /* GNManagedArticle.h */,
+				15717CDE1B49BB6800CB959F /* GNManagedArticle.m */,
+				15717CDF1B49BB6800CB959F /* GoogleNews.xcdatamodeld */,
+				15717CE11B49BB6800CB959F /* NSManagedObject+GNAdditions.h */,
+				15717CE21B49BB6800CB959F /* NSManagedObject+GNAdditions.m */,
+				15717CE31B49BB6800CB959F /* NSManagedObjectContext+GNAdditions.h */,
+				15717CE41B49BB6800CB959F /* NSManagedObjectContext+GNAdditions.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		15717CE51B49BB6800CB959F /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				15717CF41B49BB6800CB959F /* GNArticleApiClient.h */,
+				15717CF51B49BB6800CB959F /* GNArticleApiClient.m */,
+				15717CF61B49BB6800CB959F /* GNNetworkCommunicator.h */,
+				15717CF71B49BB6800CB959F /* GNNetworkCommunicator.m */,
+				15717CE61B49BB6800CB959F /* ArticleBuilders */,
+				15717CEE1B49BB6800CB959F /* ArticleUrlRequests */,
+				15717CF81B49BB6800CB959F /* RSSParsing */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		15717CE61B49BB6800CB959F /* ArticleBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				15717CE71B49BB6800CB959F /* GNAbstractArticleBuilder.h */,
+				15717CE81B49BB6800CB959F /* GNAbstractArticleBuilder.m */,
+				15717CE91B49BB6800CB959F /* GNAbstractArticleBuilder_protected.h */,
+				15717CEA1B49BB6800CB959F /* GNAppleNewsArticleBuilder.h */,
+				15717CEB1B49BB6800CB959F /* GNAppleNewsArticleBuilder.m */,
+				15717CEC1B49BB6800CB959F /* GNGoogleNewsArticleBuilder.h */,
+				15717CED1B49BB6800CB959F /* GNGoogleNewsArticleBuilder.m */,
+			);
+			path = ArticleBuilders;
+			sourceTree = "<group>";
+		};
+		15717CEE1B49BB6800CB959F /* ArticleUrlRequests */ = {
+			isa = PBXGroup;
+			children = (
+				15717CEF1B49BB6800CB959F /* GNAppleNewsUrlRequest.h */,
+				15717CF01B49BB6800CB959F /* GNAppleNewsUrlRequest.m */,
+				15717CF11B49BB6800CB959F /* GNArticleUrlRequest.h */,
+				15717CF21B49BB6800CB959F /* GNGoogleNewsUrlRequest.h */,
+				15717CF31B49BB6800CB959F /* GNGoogleNewsUrlRequest.m */,
+			);
+			path = ArticleUrlRequests;
+			sourceTree = "<group>";
+		};
+		15717CF81B49BB6800CB959F /* RSSParsing */ = {
+			isa = PBXGroup;
+			children = (
+				15717CF91B49BB6800CB959F /* GDataXMLElement+GNAdditions.h */,
+				15717CFA1B49BB6800CB959F /* GDataXMLElement+GNAdditions.m */,
+				15717CFB1B49BB6800CB959F /* GNRssEntry.h */,
+				15717CFC1B49BB6800CB959F /* GNRssEntry.m */,
+				15717CFD1B49BB6800CB959F /* GNRssEntryBuilder.h */,
+				15717CFE1B49BB6800CB959F /* GNRssEntryBuilder.m */,
+				15717CFF1B49BB6800CB959F /* NSDate+InternetDateTime.h */,
+				15717D001B49BB6800CB959F /* NSDate+InternetDateTime.m */,
+			);
+			path = RSSParsing;
+			sourceTree = "<group>";
+		};
+		15717D011B49BB6800CB959F /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				15717D151B49BB6800CB959F /* GNStaticCell.h */,
+				15717D161B49BB6800CB959F /* GNStaticCell.m */,
+				15717D171B49BB6800CB959F /* UIView+LoadNib.h */,
+				15717D181B49BB6800CB959F /* UIView+LoadNib.m */,
+				15717D021B49BB6800CB959F /* ArticleList */,
+				15717D0F1B49BB6800CB959F /* ErrorLoadingArticle */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		15717D021B49BB6800CB959F /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				15717D031B49BB6800CB959F /* GNArticleCell.h */,
+				15717D041B49BB6800CB959F /* GNArticleCell.m */,
+				15717D051B49BB6800CB959F /* GNArticleCell.xib */,
+				15717D061B49BB6800CB959F /* GNArticleListTableDataSource.h */,
+				15717D071B49BB6800CB959F /* GNArticleListTableDataSource.m */,
+				15717D081B49BB6800CB959F /* GNArticleListViewController.h */,
+				15717D091B49BB6800CB959F /* GNArticleListViewController.m */,
+				15717D0A1B49BB6800CB959F /* GNArticleListViewController.xib */,
+				15717D0B1B49BB6800CB959F /* GNPullToRefreshView.h */,
+				15717D0C1B49BB6800CB959F /* GNPullToRefreshView.m */,
+				15717D0D1B49BB6800CB959F /* NSFetchedResultsController+GNAdditions.h */,
+				15717D0E1B49BB6800CB959F /* NSFetchedResultsController+GNAdditions.m */,
+			);
+			path = ArticleList;
+			sourceTree = "<group>";
+		};
+		15717D0F1B49BB6800CB959F /* ErrorLoadingArticle */ = {
+			isa = PBXGroup;
+			children = (
+				15717D101B49BB6800CB959F /* GNArticleLoadingErrorCell.h */,
+				15717D111B49BB6800CB959F /* GNArticleLoadingErrorCell.m */,
+				15717D121B49BB6800CB959F /* GNArticleLoadingErrorCell.xib */,
+				15717D131B49BB6800CB959F /* UIScreen+GNAdditions.h */,
+				15717D141B49BB6800CB959F /* UIScreen+GNAdditions.m */,
+			);
+			path = ErrorLoadingArticle;
+			sourceTree = "<group>";
+		};
+		15717D1B1B49BB6800CB959F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15717D471B49BB9800CB959F /* Default-568h@2x.png */,
+				15717D1C1B49BB6800CB959F /* LaunchScreen.xib */,
+				15717D1E1B49BB6800CB959F /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15717D1F1B49BB6800CB959F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				15717D201B49BB6800CB959F /* Info.plist */,
+				15717D211B49BB6800CB959F /* main.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		157D694B1B4A6E0D0057CF3F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				157D694C1B4A6E0D0057CF3F /* GNDatabaseIntegrationSpec.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		157D694D1B4A6E0D0057CF3F /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				157D694E1B4A6E0D0057CF3F /* GNArticleApiClientIntegrationSpec.m */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		922770E13C1E44C3B31DF01A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFD3A73E4F044FF7AF266EDF /* libPods.a */,
+				04E1989B41B9A626E9971F39 /* libPods-NewsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D79CA90C6F3B54D6F74D40DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2631E91D0850F69293CF29A2 /* Pods.debug.xcconfig */,
+				C0E719DA343370FD21F9312A /* Pods.release.xcconfig */,
+				729CF8BADB8F8B07170D0AAC /* Pods-NewsTests.debug.xcconfig */,
+				CA75F5A4828DBC5586CC8F5A /* Pods-NewsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1539605819CE556B000BF2AE /* News */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1539607F19CE556B000BF2AE /* Build configuration list for PBXNativeTarget "News" */;
+			buildPhases = (
+				38AC1EFE1EC445E985C8A580 /* Check Pods Manifest.lock */,
+				1539605519CE556B000BF2AE /* Sources */,
+				1539605619CE556B000BF2AE /* Frameworks */,
+				1539605719CE556B000BF2AE /* Resources */,
+				870361BBCB834EDFBAA5368D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = News;
+			productName = FeedLoader;
+			productReference = 1539605919CE556B000BF2AE /* News.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1539607419CE556B000BF2AE /* NewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1539608219CE556B000BF2AE /* Build configuration list for PBXNativeTarget "NewsTests" */;
+			buildPhases = (
+				A2805C89349C128954A6A979 /* Check Pods Manifest.lock */,
+				1539607119CE556B000BF2AE /* Sources */,
+				1539607219CE556B000BF2AE /* Frameworks */,
+				1539607319CE556B000BF2AE /* Resources */,
+				B140C93214CCF144336FCE47 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1539607719CE556B000BF2AE /* PBXTargetDependency */,
+			);
+			name = NewsTests;
+			productName = FeedLoaderTests;
+			productReference = 1539607519CE556B000BF2AE /* NewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1539605119CE556B000BF2AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GN;
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pawan Poudel";
+				TargetAttributes = {
+					1539605819CE556B000BF2AE = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					1539607419CE556B000BF2AE = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 1539605819CE556B000BF2AE;
+					};
+				};
+			};
+			buildConfigurationList = 1539605419CE556B000BF2AE /* Build configuration list for PBXProject "News" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1539605019CE556B000BF2AE;
+			productRefGroup = 1539605A19CE556B000BF2AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1539605819CE556B000BF2AE /* News */,
+				1539607419CE556B000BF2AE /* NewsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1539605719CE556B000BF2AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15717D491B49BE1C00CB959F /* LaunchScreen.xib in Resources */,
+				15717D371B49BB6800CB959F /* GNArticleCell.xib in Resources */,
+				15717D441B49BB6800CB959F /* Images.xcassets in Resources */,
+				15717D3A1B49BB6800CB959F /* GNArticleListViewController.xib in Resources */,
+				15717D3E1B49BB6800CB959F /* GNArticleLoadingErrorCell.xib in Resources */,
+				15717D481B49BB9800CB959F /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1539607319CE556B000BF2AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				153E3DEF1B4A3AFD00435C9F /* validAppleNewsRssFeed.xml in Resources */,
+				153E3DF01B4A3AFD00435C9F /* validGoogleNewsRssFeed.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38AC1EFE1EC445E985C8A580 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		870361BBCB834EDFBAA5368D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2805C89349C128954A6A979 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B140C93214CCF144336FCE47 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsTests/Pods-NewsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1539605519CE556B000BF2AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15717D411B49BB6800CB959F /* UIView+LoadNib.m in Sources */,
+				15717D2F1B49BB6800CB959F /* GNGoogleNewsUrlRequest.m in Sources */,
+				15717D251B49BB6800CB959F /* GNArticleCoreDataManager.m in Sources */,
+				15717D3F1B49BB6800CB959F /* UIScreen+GNAdditions.m in Sources */,
+				15717D311B49BB6800CB959F /* GNNetworkCommunicator.m in Sources */,
+				15717D241B49BB6800CB959F /* GNObjectConfigurator.m in Sources */,
+				15717D351B49BB6800CB959F /* NSDate+InternetDateTime.m in Sources */,
+				15717D421B49BB6800CB959F /* GNAppDelegate.m in Sources */,
+				15717D391B49BB6800CB959F /* GNArticleListViewController.m in Sources */,
+				15717D3C1B49BB6800CB959F /* NSFetchedResultsController+GNAdditions.m in Sources */,
+				15717D261B49BB6800CB959F /* GNCoreDataStack.m in Sources */,
+				15717D3B1B49BB6800CB959F /* GNPullToRefreshView.m in Sources */,
+				15717D231B49BB6800CB959F /* GNFetchArticlesUseCase.m in Sources */,
+				15717D461B49BB6800CB959F /* main.m in Sources */,
+				15717D2A1B49BB6800CB959F /* NSManagedObjectContext+GNAdditions.m in Sources */,
+				15717D3D1B49BB6800CB959F /* GNArticleLoadingErrorCell.m in Sources */,
+				15717D291B49BB6800CB959F /* NSManagedObject+GNAdditions.m in Sources */,
+				15717D401B49BB6800CB959F /* GNStaticCell.m in Sources */,
+				15717D381B49BB6800CB959F /* GNArticleListTableDataSource.m in Sources */,
+				15717D2E1B49BB6800CB959F /* GNAppleNewsUrlRequest.m in Sources */,
+				15717D2C1B49BB6800CB959F /* GNAppleNewsArticleBuilder.m in Sources */,
+				15717D221B49BB6800CB959F /* GNArticle.m in Sources */,
+				15717D341B49BB6800CB959F /* GNRssEntryBuilder.m in Sources */,
+				15717D321B49BB6800CB959F /* GDataXMLElement+GNAdditions.m in Sources */,
+				15717D281B49BB6800CB959F /* GoogleNews.xcdatamodeld in Sources */,
+				15717D2D1B49BB6800CB959F /* GNGoogleNewsArticleBuilder.m in Sources */,
+				15717D331B49BB6800CB959F /* GNRssEntry.m in Sources */,
+				15717D271B49BB6800CB959F /* GNManagedArticle.m in Sources */,
+				15717D2B1B49BB6800CB959F /* GNAbstractArticleBuilder.m in Sources */,
+				15717D361B49BB6800CB959F /* GNArticleCell.m in Sources */,
+				15717D301B49BB6800CB959F /* GNArticleApiClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1539607119CE556B000BF2AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				153E3DE91B4A3AFD00435C9F /* GNAppleNewsArticleBuilderSpec.m in Sources */,
+				157D694F1B4A6E0D0057CF3F /* GNDatabaseIntegrationSpec.m in Sources */,
+				153E3DEC1B4A3AFD00435C9F /* GNGoogleNewsUrlRequestSpec.m in Sources */,
+				153E3DED1B4A3AFD00435C9F /* GNArticleApiClientSpec.m in Sources */,
+				153E3DEB1B4A3AFD00435C9F /* GNAppleNewsUrlRequestSpec.m in Sources */,
+				153E3DF11B4A3AFD00435C9F /* GNMockNetworkCommunicator.m in Sources */,
+				153E3DE41B4A3AFD00435C9F /* GNFetchArticlesUseCaseSpec.m in Sources */,
+				153E3DEE1B4A3AFD00435C9F /* GNTestRssData.m in Sources */,
+				153E3DE81B4A3AFD00435C9F /* GNObjectConfiguratorSpec.m in Sources */,
+				157D69501B4A6E0D0057CF3F /* GNArticleApiClientIntegrationSpec.m in Sources */,
+				153E3DF61B4A3DC800435C9F /* GNArticleSpec.m in Sources */,
+				153E3DE61B4A3AFD00435C9F /* GNMockArticleService.m in Sources */,
+				153E3DE71B4A3AFD00435C9F /* GNMockFetchArticlesUseCaseOutput.m in Sources */,
+				153E3DEA1B4A3AFD00435C9F /* GNGoogleNewsArticleBuilderSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1539607719CE556B000BF2AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1539605819CE556B000BF2AE /* News */;
+			targetProxy = 1539607619CE556B000BF2AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15717D1C1B49BB6800CB959F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15717D1D1B49BB6800CB959F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1539607D19CE556B000BF2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1539607E19CE556B000BF2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1539608019CE556B000BF2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2631E91D0850F69293CF29A2 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = News/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = News;
+			};
+			name = Debug;
+		};
+		1539608119CE556B000BF2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0E719DA343370FD21F9312A /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = News/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = News;
+			};
+			name = Release;
+		};
+		1539608319CE556B000BF2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 729CF8BADB8F8B07170D0AAC /* Pods-NewsTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = NewsTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/News.app/News";
+			};
+			name = Debug;
+		};
+		1539608419CE556B000BF2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA75F5A4828DBC5586CC8F5A /* Pods-NewsTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = NewsTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/News.app/News";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1539605419CE556B000BF2AE /* Build configuration list for PBXProject "News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1539607D19CE556B000BF2AE /* Debug */,
+				1539607E19CE556B000BF2AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1539607F19CE556B000BF2AE /* Build configuration list for PBXNativeTarget "News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1539608019CE556B000BF2AE /* Debug */,
+				1539608119CE556B000BF2AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1539608219CE556B000BF2AE /* Build configuration list for PBXNativeTarget "NewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1539608319CE556B000BF2AE /* Debug */,
+				1539608419CE556B000BF2AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		15717CDF1B49BB6800CB959F /* GoogleNews.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15717CE01B49BB6800CB959F /* GoogleNews.xcdatamodel */,
+			);
+			currentVersion = 15717CE01B49BB6800CB959F /* GoogleNews.xcdatamodel */;
+			path = GoogleNews.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1539605119CE556B000BF2AE /* Project object */;
+}

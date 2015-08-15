@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News App Architecture</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="news">News</h1>
+
+<p>This app allows you to view news downloaded from a remote RSS feed server. Currently, it supports <a href="https://news.google.com/">Google News</a> and <a href="http://www.apple.com/hotnews/">Apple Hot News</a>. It can easily be extended to add support for other news sources as well. Here is what you need to provide to integrate with a different news source:</p>
+
+<ul>
+<li><p>A class that knows how to generate an appropriate <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/">URL request</a>. This class needs to implement the <code>GNArticleUrlRequest</code> protocol.</p></li>
+<li><p>A class that knows how to translate an RSS entry into a <code>GNArticle</code> domain object. This class should be a subclass of <code>GNAbstractArticleBuilder</code>. The translation between an RSS entry and a domain object can be performed by overriding the <code>createArticleFromRssEntry:</code> method.</p></li>
+</ul>
+
+<pre class="prettyprint"><code class="language-Obj-c hljs erlang"><span class="hljs-pp">- <span class="hljs-params">(<span class="hljs-variable">GNArticle</span> *)</span>createArticleFromRssEntry:<span class="hljs-params">(<span class="hljs-variable">GNRssEntry</span> *)</span>rssEntry {
+    // Translation code goes here
+}</span></code></pre>
+
+
+
+<h2 id="displaying-apple-hot-news">Displaying Apple Hot News</h2>
+
+<p>By default the app displays the <a href="http://news.google.com/?output=rss">RSS news feed</a> from Google. To turn it into an <a href="https://www.apple.com/main/rss/hotnews/hotnews.rss">Apple Hot News</a> feed loader all you need to do is inject Apple News specific objects in <code>GNObjectConfigurator</code> class as shown below.</p>
+
+<pre class="prettyprint"><code class="language-Obj-c hljs objectivec"><span class="hljs-class"><span class="hljs-keyword">@implementation</span> <span class="hljs-title">GNObjectConfigurator</span></span>
+
+- (GNArticleApiClient *)articleApiClient {
+    <span class="hljs-comment">// id&lt;GNArticleUrlRequest&gt; urlRequest = [[GNGoogleNewsUrlRequest alloc] init];</span>
+    <span class="hljs-keyword">id</span>&lt;GNArticleUrlRequest&gt; urlRequest = [[GNAppleNewsUrlRequest alloc] init];
+
+    GNNetworkCommunicator *networkCommunicator = [[GNNetworkCommunicator alloc] init];    
+    <span class="hljs-keyword">return</span> [[GNArticleApiClient alloc] initWithArticleUrlRequest:urlRequest
+                                             networkCommunicator:networkCommunicator
+                                                  articleBuilder:[<span class="hljs-keyword">self</span> articleBuilder]];
+}
+
+- (GNAbstractArticleBuilder *)articleBuilder {
+    GNRssEntryBuilder *rssEntryBuilder = [[GNRssEntryBuilder alloc] init];
+
+    <span class="hljs-comment">// return [[GNGoogleNewsArticleBuilder alloc] initWithRssEntryBuilder:rssEntryBuilder];</span>
+    <span class="hljs-keyword">return</span> [[GNAppleNewsArticleBuilder alloc] initWithRssEntryBuilder:rssEntryBuilder];
+}
+
+<span class="hljs-keyword">@end</span>
+</code></pre>
+
+<blockquote>
+  <p>Remember to uninstall the app before making the aforementioned changes.</p>
+</blockquote>
+
+<h2 id="building">Building</h2>
+
+<p>The app relies on a number of open-source libraries. All these dependencies are acquired through <a href="https://cocoapods.org/">Cocoapods</a>. All pods are locked into a specific version to make sure that the app continues to work no matter which machine it gets built from. Since all pods are distributed along with the project, there is no need to run <code>pod install</code> from the command line.</p>
+
+<h2 id="testing">Testing</h2>
+
+<p>The test suite contains unit and integration tests. Both tests can be run together by either selecting <em>Product</em> -&gt; <em>Test</em> from the Xcode menu or using the keyboard shortcut <em>⌘U</em>. Although the integration tests for <code>GNArticleApiClient</code> use the <a href="https://github.com/AliSoftware/OHHTTPStubs">OHHTTPStubs</a> library to stub all outgoing HTTP requests, this doesn’t affect the application target. The <code>OHHTTPStubs</code> library is linked only to the test target in the <code>Podfile</code> as shown below.</p>
+
+<pre class="prettyprint"><code class="language-ruby hljs ">target <span class="hljs-symbol">:NewsTests</span>, <span class="hljs-symbol">:exclusive</span> =&gt; <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+    pod <span class="hljs-string">'OHHTTPStubs'</span>
+<span class="hljs-keyword">end</span></code></pre>
+
+
+
+<h2 id="architecture">Architecture</h2>
+
+<p>The architecture of this app is heavily inspired by the <a href="http://goo.gl/1EgMwV">Clean Architecture</a>. This architecture encourages a good separation of concerns by creating explicit boundaries around the application logic. The following diagram shows how various components that make downloading an RSS feed from a remote server and displaying it to the user possible fit into an overall structure defined by the Clean Architecture.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/115379/8519073/ce78dd4c-239d-11e5-8cf4-ee8c65e66da0.png" alt="" title=""></p>
+
+<p>It is worth noting that the application logic contained in the use case and entity objects are encapsulated from all external dependencies including the user interface (UI). The following protocols play a vital role in hiding this outside detail from the use case:</p>
+
+<ul>
+<li><code>GNFetchArticlesUseCaseInput</code></li>
+<li><code>GNFetchArticlesUseCaseOutput</code></li>
+<li><code>GNArticleService</code></li>
+<li><code>GNArticleRepository</code></li>
+</ul>
+
+<blockquote>
+  <p>This approach of making both the high level and low level modules depend on abstractions is further explored in <a href="http://www.objectmentor.com/resources/articles/dip.pdf">this paper</a>.</p>
+</blockquote>
+
+<p>One of the biggest benefits of this approach is that the application logic remains unaffected if we decide to make changes to any of the external dependencies, for example using a different RSS feed source or database technology.</p></div></body>
+</html>

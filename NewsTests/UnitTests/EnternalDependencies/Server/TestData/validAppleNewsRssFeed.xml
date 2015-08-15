@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Apple Hot News</title>
+        <link>http://www.apple.com/hotnews/</link>
+        <description>Hot News provided by Apple.</description>
+        <language>en-us</language>
+        <copyright>Copyright 2015, Apple Inc.</copyright>
+        <pubDate>Mon, 08 Jun 2015 15:13:28 PDT</pubDate>
+        <lastBuildDate>Mon, 08 Jun 2015 15:13:28 PDT</lastBuildDate>
+        <category>Apple</category>
+        <generator>In house</generator>
+        <docs>http://blogs.law.harvard.edu/tech/rss/</docs>
+        <item>
+            <title>Apple Previews iOS 9</title>
+            <link>http://www.apple.com/pr/library/2015/06/08Apple-Previews-iOS-9.html?sr=hotnews.rss</link>
+            <description>Apple today unveiled iOS 9, giving a preview of new iPhone, iPad, and iPod touch software that will be available this fall. In this upcoming release, iOS devices become more intelligent and proactive with powerful search and improved Siri features — all without compromising users’ privacy. New multitasking features designed specifically for iPad allow you to work with two apps simultaneously, side-by-side, or with the new Picture-in-Picture feature, to keep watching a video while browsing the web, composing email, or using any other app. “iOS 9 is packed with more intelligence throughout, and delivers big updates to the apps customers use most — Maps supports public transit, a redesigned Notes app provides great new ways to capture ideas, and a beautiful News app delivers content that’s personalized to your interests,” said Craig Federighi, Apple’s senior vice president of Software Engineering. “With our new iPad features, users can take advantage of the power of iPad, working in two apps at the same time with Split View, Slide Over, or Picture-in-Picture.”</description>
+            <pubDate>Mon, 08 Jun 2015 13:52:57 PDT</pubDate>
+        </item>        
+        <item>
+            <title>Introducing Apple Music — All The Ways You Love Music. All in One Place.</title>
+            <link>http://www.apple.com/pr/library/2015/06/08Introducing-Apple-Music-All-The-Ways-You-Love-Music-All-in-One-Place-.html?sr=hotnews.rss</link>
+            <description>Apple today unveiled Apple Music, a single, intuitive app that combines the best ways to enjoy music — all in one place. Apple Music is a streaming music service, a worldwide live radio station broadcasting 24 hours a day, and a new way for music fans to connect with their favorite artists. Apple Music combines the largest and most diverse collection of music with the expertise of world-class experts who have programmed playlists for your iPhone, iPad, iPod touch, Mac, PC, Apple TV, and Android phones. Apple Music will be available starting June 30 in over 100 countries. “We love music, and the new Apple Music service puts an incredible experience at every fan’s fingertips,” said Eddy Cue, Apple’s senior vice president of Internet Software and Services. “All the ways people love enjoying music come together in one app — a revolutionary streaming service, live worldwide radio, and an exciting way for fans to connect with artists.”</description>
+            <pubDate>Mon, 08 Jun 2015 13:55:49 PDT</pubDate>
+        </item>
+    </channel>
+</rss>
